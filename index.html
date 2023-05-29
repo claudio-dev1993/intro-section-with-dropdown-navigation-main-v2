@@ -11,52 +11,59 @@
 
 <body>
 
-  <header>
-    <img src="./images/logo.svg" alt="snap logo">
-    <button aria-label="open main menu button">Menu</button>
-    <nav aria-hidden="true">
-      <nav>
-        <button aria-label="open features button">Features</button>
-        <ul role="doc-pagelist" aria-expanded="false">
-          <li><a href="#">Todo List</a></li>
-          <li><a href="#">Calendar</a></li>
-          <li><a href="#">Reminders</a></li>
-          <li><a href="#">Planning</a></li>
+  <header class="header">
+
+    <img class="header__logo" src="./images/logo.svg" alt="snap logo">
+    <button class="header__button" aria-label="open main menu button">Menu</button>
+
+    <nav class="menu-background" aria-hidden="true">
+
+      <nav class="menu">
+
+        <button class="menu__option" aria-label="open features button">Features</button>
+        <ul class="dropdown-menu" role="doc-pagelist" aria-expanded="false">
+
+          <li><a class="dropdown-menu__option" href="#">Todo List</a></li>
+          <li><a class="dropdown-menu__option" href="#">Calendar</a></li>
+          <li><a class="dropdown-menu__option" href="#">Reminders</a></li>
+          <li><a class="dropdown-menu__option" href="#">Planning</a></li>
         </ul>
-        <button aria-label="open company button">Company</button>
-        <ul role="doc-pagelist" aria-expanded="false">
-          <li><a href="#">History</a></li>
-          <li><a href="#">Our team</a></li>
-          <li><a href="#">Blog</a></li>
+        <button class="menu__option" aria-label="open company button">Company</button>
+        <ul class="dropdown-menu" role="doc-pagelist" aria-expanded="false">
+
+          <li><a class="dropdown-menu__option" href="#">History</a></li>
+          <li><a class="dropdown-menu__option" href="#">Our team</a></li>
+          <li><a class="dropdown-menu__option" href="#">Blog</a></li>
         </ul>
-        <a href="#">Careers</a>
-        <a href="#">About</a>
-        <div aria-label="user account section">
-          <a href="#">Login</a>
-          <a href="#">Register</a>
+        <a class="menu__option" href="#">Careers</a>
+        <a class="menu__option" href="#">About</a>
+        <div class="menu-account-section" aria-label="user account section">
+
+          <a class="menu__option" href="#">Login</a>
+          <a class="menu__option" href="#">Register</a>
         </div>
       </nav>
     </nav>
   </header>
 
-  <main>
-    <picture>
+  <main class="main-content">
+    <picture class="picture">
       <source media="(min-width: 768px)" srcset="./images/image-hero-desktop.png">
-      <img src="./images/image-hero-mobile.png" alt="a man with a laptop">
+      <img class="picture__hero" src="./images/image-hero-mobile.png" alt="a man with a laptop">
     </picture>
 
-    <article>
-      <h1>Make remote work</h1>
-      <p>
+    <article class="article">
+      <h1 class="article__header">Make remote work</h1>
+      <p class="article__text">
         Get your team in sync, no matter your location. Streamline processes,
         create team rituals, and watch productivity soar.
       </p>
-      <a href="#">Learn more</a>
-      <ul aria-hidden="true">
-        <li><img src="./images/client-databiz.svg" alt=""></li>
-        <li><img src="./images/client-audiophile.svg" alt=""></li>
-        <li><img src="./images/client-meet.svg" alt=""></li>
-        <li><img src="./images/client-maker.svg" alt=""></li>
+      <a class="article__link" href="#">Learn more</a>
+      <ul class="client-list" aria-hidden="true">
+        <li><img class="client-list__item" src="./images/client-databiz.svg" alt=""></li>
+        <li><img class="client-list__item" src="./images/client-audiophile.svg" alt=""></li>
+        <li><img class="client-list__item" src="./images/client-meet.svg" alt=""></li>
+        <li><img class="client-list__item" src="./images/client-maker.svg" alt=""></li>
       </ul>
     </article>
 
