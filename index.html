@@ -13,31 +13,32 @@
 
   <header>
     <img src="./images/logo.svg" alt="snap logo">
-    <button>Menu</button>
-    <nav>
+    <button aria-label="open main menu button">Menu</button>
+    <nav aria-hidden="true">
       <nav>
-        <a href="">Features</a>
-        <ul>
-          <li><a href="">Todo List</a></li>
-          <li>a href="">Calendar</a></li>
-          <li>a href="">Reminders</a></li>
-          <li>a href="">Planning</a></li>
+        <button aria-label="open features button">Features</button>
+        <ul role="doc-pagelist" aria-expanded="false">
+          <li><a href="#">Todo List</a></li>
+          <li><a href="#">Calendar</a></li>
+          <li><a href="#">Reminders</a></li>
+          <li><a href="#">Planning</a></li>
         </ul>
-        <a href="">Company</a>
-        <ul>
-          <li><a href="">History</a></li>
-          <li><a href="">Our team</a></li>
-          <li><a href="">Blog</a></li>
+        <button aria-label="open company button">Company</button>
+        <ul role="doc-pagelist" aria-expanded="false">
+          <li><a href="#">History</a></li>
+          <li><a href="#">Our team</a></li>
+          <li><a href="#">Blog</a></li>
         </ul>
-        <a href="">Careers</a>
-        <a href="">About</a>
-        <div>
-          <a href="">Login</a>
-          <a href="">Register</a>
+        <a href="#">Careers</a>
+        <a href="#">About</a>
+        <div aria-label="user account section">
+          <a href="#">Login</a>
+          <a href="#">Register</a>
         </div>
       </nav>
     </nav>
   </header>
+
   <main>
     <picture>
       <source media="(min-width: 768px)" srcset="./images/image-hero-desktop.png">
@@ -50,12 +51,12 @@
         Get your team in sync, no matter your location. Streamline processes,
         create team rituals, and watch productivity soar.
       </p>
-      <a href="">Learn more</a>
-      <ul>
-        <li><img src="./images/client-databiz.svg" alt="client-databiz"></li>
-        <li><img src="./images/client-audiophile.svg" alt="client-audiophile"></li>
-        <li><img src="./images/client-meet.svg" alt="client-meet"></li>
-        <li><img src="./images/client-maker.svg" alt="client-maker"></li>
+      <a href="#">Learn more</a>
+      <ul aria-hidden="true">
+        <li><img src="./images/client-databiz.svg" alt=""></li>
+        <li><img src="./images/client-audiophile.svg" alt=""></li>
+        <li><img src="./images/client-meet.svg" alt=""></li>
+        <li><img src="./images/client-maker.svg" alt=""></li>
       </ul>
     </article>
 
