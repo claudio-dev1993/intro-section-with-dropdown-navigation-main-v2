@@ -46,7 +46,7 @@ body {
 
     .side-background {
         position: fixed;
-        width: 100%;
+        width: 0%;
         height: 100vh;
         z-index: 1;
         overflow-x: hidden;
@@ -58,9 +58,9 @@ body {
     .menu {
         position: fixed;
         z-index: 1;
-        width:240px;
+        width: 0;
         height: 100vh;
-        padding: 1.5rem;
+        padding: 0;
         overflow-x: hidden;
         top: 0;
         right: 0;
@@ -79,8 +79,8 @@ body {
 
             &:hover {
                 cursor: pointer;
-                outline: auto ;
-                transition: 0.5s;
+                transform: rotate(180deg);
+                transition: .5s;
             }
         }
 
@@ -90,7 +90,10 @@ body {
             height: 42px;
             @include display-flex(row, center, auto );
             @include font-style(1rem, auto, $medium-gray);
-            
+            &:hover {
+                color: $almost-black;
+            }
+
             &--drop::after {
                 content: url('/images/icon-arrow-down.svg');
                 padding-left: 1rem;
@@ -111,7 +114,6 @@ body {
                 @include display-flex(row, center, center);
                 &:hover {
                     border-color: $almost-black;
-                    color: $almost-black;
                     transition: 0.5s;
                 }
             }
@@ -131,6 +133,11 @@ body {
                 @include display-flex(row, center, auto );
                 column-gap: 1rem ;
                 @include font-style(1rem, auto, $medium-gray);
+
+                &:hover {
+                    transform: translateX(0.5rem);
+                    transition: .5s;
+                }
             }
 
             .todo::before {

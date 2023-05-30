@@ -47,7 +47,7 @@ body {
 }
 .header .side-background {
   position: fixed;
-  width: 100%;
+  width: 0%;
   height: 100vh;
   z-index: 1;
   overflow-x: hidden;
@@ -58,9 +58,9 @@ body {
 .header .menu {
   position: fixed;
   z-index: 1;
-  width: 240px;
+  width: 0;
   height: 100vh;
-  padding: 1.5rem;
+  padding: 0;
   overflow-x: hidden;
   top: 0;
   right: 0;
@@ -79,7 +79,7 @@ body {
 }
 .header .menu__close-menu:hover {
   cursor: pointer;
-  outline: auto;
+  transform: rotate(180deg);
   transition: 0.5s;
 }
 .header .menu__option {
@@ -94,6 +94,9 @@ body {
   font-size: 1rem;
   line-height: auto;
   color: hsl(0, 0%, 41%);
+}
+.header .menu__option:hover {
+  color: hsl(0, 0%, 8%);
 }
 .header .menu__option--drop::after {
   content: url("/images/icon-arrow-down.svg");
@@ -120,7 +123,6 @@ body {
 }
 .header .menu__option--register:hover {
   border-color: hsl(0, 0%, 8%);
-  color: hsl(0, 0%, 8%);
   transition: 0.5s;
 }
 .header .menu-account-section {
@@ -140,6 +142,10 @@ body {
   font-size: 1rem;
   line-height: auto;
   color: hsl(0, 0%, 41%);
+}
+.header .menu .dropdown-menu__option:hover {
+  transform: translateX(0.5rem);
+  transition: 0.5s;
 }
 .header .menu .dropdown-menu .todo::before {
   content: url("/images/icon-todo.svg");
