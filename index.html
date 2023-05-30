@@ -14,35 +14,34 @@
   <header class="header">
 
     <img class="header__logo" src="./images/logo.svg" alt="snap logo">
-    <button class="header__button" aria-label="open main menu button">Menu</button>
+    <button class="header__open-menu" aria-label="open menu button"></button>
 
-    <nav class="menu-background" aria-hidden="true">
+    <div class="side-background" aria-hidden="true"></div>
+    <nav class="menu">
 
-      <nav class="menu">
+      <button class="menu__close-menu" aria-label="close menu button"></button>
+      <button class="menu__option menu__option--drop" aria-label="open features button">Features</button>
+      <ul class="dropdown-menu" role="doc-pagelist" aria-expanded="false">
 
-        <button class="menu__option" aria-label="open features button">Features</button>
-        <ul class="dropdown-menu" role="doc-pagelist" aria-expanded="false">
+        <li><a class="dropdown-menu__option todo" href="#">Todo List</a></li>
+        <li><a class="dropdown-menu__option calendar" href="#">Calendar</a></li>
+        <li><a class="dropdown-menu__option reminder" href="#">Reminders</a></li>
+        <li><a class="dropdown-menu__option planning" href="#">Planning</a></li>
+      </ul>
+      <button class="menu__option menu__option--drop" aria-label="open company button">Company</button>
+      <ul class="dropdown-menu" role="doc-pagelist" aria-expanded="false">
 
-          <li><a class="dropdown-menu__option" href="#">Todo List</a></li>
-          <li><a class="dropdown-menu__option" href="#">Calendar</a></li>
-          <li><a class="dropdown-menu__option" href="#">Reminders</a></li>
-          <li><a class="dropdown-menu__option" href="#">Planning</a></li>
-        </ul>
-        <button class="menu__option" aria-label="open company button">Company</button>
-        <ul class="dropdown-menu" role="doc-pagelist" aria-expanded="false">
+        <li><a class="dropdown-menu__option" href="#">History</a></li>
+        <li><a class="dropdown-menu__option" href="#">Our team</a></li>
+        <li><a class="dropdown-menu__option" href="#">Blog</a></li>
+      </ul>
+      <a class="menu__option" href="#">Careers</a>
+      <a class="menu__option" href="#">About</a>
+      <div class="menu-account-section" aria-label="user account section">
 
-          <li><a class="dropdown-menu__option" href="#">History</a></li>
-          <li><a class="dropdown-menu__option" href="#">Our team</a></li>
-          <li><a class="dropdown-menu__option" href="#">Blog</a></li>
-        </ul>
-        <a class="menu__option" href="#">Careers</a>
-        <a class="menu__option" href="#">About</a>
-        <div class="menu-account-section" aria-label="user account section">
-
-          <a class="menu__option" href="#">Login</a>
-          <a class="menu__option" href="#">Register</a>
-        </div>
-      </nav>
+        <a class="menu__option menu__option--login" href="#">Login</a>
+        <a class="menu__option menu__option--register" href="#">Register</a>
+      </div>
     </nav>
   </header>
 

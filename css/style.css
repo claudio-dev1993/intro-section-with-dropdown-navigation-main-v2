@@ -16,6 +16,146 @@ li {
 button {
   border: none;
   background-color: transparent;
+  text-align: start;
+  cursor: pointer;
+}
+
+body {
+  min-width: 375px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "header" "main";
+}
+
+.header {
+  grid-area: header;
+  height: 35px;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.header__open-menu::after {
+  content: url("../images/icon-menu.svg");
+}
+.header__open-menu:hover {
+  cursor: pointer;
+}
+.header .side-background {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  overflow-x: hidden;
+  background-color: hsla(0, 0%, 0%, 0.75);
+  top: 0;
+  left: 0;
+}
+.header .menu {
+  position: fixed;
+  z-index: 1;
+  width: 240px;
+  height: 100vh;
+  padding: 1.5rem;
+  overflow-x: hidden;
+  top: 0;
+  right: 0;
+  background-color: hsl(0, 0%, 98%);
+  transition: 0.5s;
+}
+.header .menu__close-menu {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  left: 77%;
+  margin: 0 0 1rem 1rem;
+}
+.header .menu__close-menu::after {
+  content: url("/images/icon-close-menu.svg");
+}
+.header .menu__close-menu:hover {
+  cursor: pointer;
+  outline: auto;
+  transition: 0.5s;
+}
+.header .menu__option {
+  display: block;
+  width: 100%;
+  height: 42px;
+  display: flex;
+  flex-direction: row;
+  justify-content: auto;
+  align-items: center;
+  font-family: "Epilogue", sans-serif;
+  font-size: 1rem;
+  line-height: auto;
+  color: hsl(0, 0%, 41%);
+}
+.header .menu__option--drop::after {
+  content: url("/images/icon-arrow-down.svg");
+  padding-left: 1rem;
+}
+.header .menu__option--login {
+  font-size: 0.87rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header .menu__option--login:hover {
+  text-decoration: underline;
+}
+.header .menu__option--register {
+  font-size: 0.87rem;
+  border: 1px solid hsl(0, 0%, 41%);
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header .menu__option--register:hover {
+  border-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 8%);
+  transition: 0.5s;
+}
+.header .menu-account-section {
+  margin-top: 1rem;
+}
+.header .menu .dropdown-menu__option {
+  display: block;
+  width: 100%;
+  height: 42px;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: auto;
+  align-items: center;
+  column-gap: 1rem;
+  font-family: "Epilogue", sans-serif;
+  font-size: 1rem;
+  line-height: auto;
+  color: hsl(0, 0%, 41%);
+}
+.header .menu .dropdown-menu .todo::before {
+  content: url("/images/icon-todo.svg");
+}
+.header .menu .dropdown-menu .calendar::before {
+  content: url("/images/icon-calendar.svg");
+}
+.header .menu .dropdown-menu .reminder::before {
+  content: url("/images/icon-reminders.svg");
+}
+.header .menu .dropdown-menu .planning::before {
+  content: url("/images/icon-planning.svg");
+}
+
+.main-content {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
