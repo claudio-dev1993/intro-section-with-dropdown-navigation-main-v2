@@ -21,7 +21,7 @@ button {
 }
 
 body {
-  min-width: 375px;
+  min-width: 320px;
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
@@ -60,7 +60,6 @@ body {
   z-index: 1;
   width: 0;
   height: 100vh;
-  padding: 0;
   overflow-x: hidden;
   top: 0;
   right: 0;
@@ -128,6 +127,15 @@ body {
 .header .menu-account-section {
   margin-top: 1rem;
 }
+.header .menu .dropdown-menu__content {
+  display: none;
+}
+.header .menu .dropdown-menu:hover .dropdown-menu__content {
+  display: block;
+}
+.header .menu .dropdown-menu:hover .menu__option--drop::after {
+  content: url("/images/icon-arrow-up.svg");
+}
 .header .menu .dropdown-menu__option {
   display: block;
   width: 100%;
@@ -146,6 +154,7 @@ body {
 .header .menu .dropdown-menu__option:hover {
   transform: translateX(0.5rem);
   transition: 0.5s;
+  height: 40px;
 }
 .header .menu .dropdown-menu .todo::before {
   content: url("/images/icon-todo.svg");

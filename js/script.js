@@ -5,7 +5,7 @@ function menuIsOpen() {
         document.getElementById('menu').style.width = '480px'
     }
     document.getElementById('sideBack').style.width = '100%'
-    document.getElementById('menu').style.padding = '1.5rem'
+    document.getElementById('menu').style.padding = ' 1.5rem'
 }
 
 function menuIsClosed() {
@@ -21,3 +21,4 @@ document.getElementById('openMenu').addEventListener('click', () => {
 document.getElementById('closeMenu').addEventListener('click', () => {
     menuIsClosed()
 })
+
