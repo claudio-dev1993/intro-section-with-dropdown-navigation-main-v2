@@ -17,6 +17,7 @@
 }
 
 body {
+    @include font-style(1rem, auto, auto);
     min-width: 320px;
     min-height: 100vh;
     display: grid;
@@ -174,7 +175,42 @@ body {
 }
 
 .main-content {
-    display: none;
+    @include display-flex(column, center , flex-start);
+    .picture {
+        &__hero {
+            max-width: 100%;
+        }
+    }
+
+    .article {
+        @include display-flex(column, center, center );
+        gap: 1.5rem;
+        margin: .9rem;
+        &__header {
+            @include font-style(36px, auto, $almost-black);
+        }
+
+        &__text {
+            text-align: center;
+            @include font-style(1rem, 26px, $medium-gray);
+        }
+
+        &__link {
+            background-color: $almost-black;
+            border-radius: .8rem;
+            width:136px ;
+            height: 42px;
+            @include display-flex(row, center, center );
+            @include font-style(1rem, auto, $almost-white);
+        }
+
+        .client-list {
+            @include display-flex(row, center, center );
+            &__item {
+                width: 80%;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -183,6 +219,20 @@ body {
             &__close-menu {
                 left: 90%;
             }
+        }
+    }
+
+    .main-content {
+    
+        .picture {
+            &__hero {
+                max-width: 100%;
+            }
+        }
+
+        .article,
+        .client-list {
+            gap: 2rem;
         }
     }
 
